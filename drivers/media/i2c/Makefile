@@ -263,7 +263,8 @@ obj-$(CONFIG_VIDEO_SC530AI) += sc530ai.o
 obj-$(CONFIG_VIDEO_SC5336) += sc5336.o
 obj-$(CONFIG_VIDEO_SC635HAI) += sc635hai.o
 obj-$(CONFIG_VIDEO_SC830AI) += sc830ai.o
-obj-$(CONFIG_VIDEO_SC831AI) += sc831ai.o
+# cl3566: sc831ai.c uses pre-6.1 V4L2 API, broken in this tree; board has no such sensor
+obj-n += sc831ai.o
 obj-$(CONFIG_VIDEO_SC850SL) += sc850sl.o
 obj-$(CONFIG_VIDEO_SENSOR_ADAPTER) += sensor_adapter.o
 obj-$(CONFIG_VIDEO_SGM3784) += sgm3784.o
