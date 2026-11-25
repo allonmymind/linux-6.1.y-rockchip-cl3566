@@ -3,6 +3,10 @@ VERSION = 6
 PATCHLEVEL = 1
 SUBLEVEL = 118
 EXTRAVERSION =
+# cl3566: force empty local version so vermagic matches factory modules
+# (6.1.118 SMP mod_unload aarch64). ophub CI passes LOCALVERSION via make
+# command line; override wins over command-line and keeps it empty.
+override LOCALVERSION :=
 NAME = Curry Ramen
 
 # *DOCUMENTATION*
